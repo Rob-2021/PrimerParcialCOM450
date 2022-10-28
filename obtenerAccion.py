@@ -2,22 +2,20 @@ from re import A
 
 
 def accion(a, b):
-    esObligatorio = a
-    esDocente = b
-    esExterno = a
-    estadoRegistro = b
-    tipoPersonaDestino = b
 
-    if esObligatorio == "si" and esDocente == True:
+    if a == "si" and b == True:
         return "actualizar"
     else:
-    # if esObligatorio == "no" and esDocente == True:
         return "matricular"
 
-    if esExterno == True and estadoRegistro == "porConfirmar":
+def accion2(a, b):
+    if a == True and b == "porConfirmar":
         return "actualizar"
+    else:
+        return "matricular"
 
-    if esExterno == True and tipoPersonaDestino == externo:
+def accion3(a, b):
+    if a == True and b == "externo":
         return "registrar"
 
 print(accion("si", True))
