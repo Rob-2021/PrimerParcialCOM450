@@ -6,14 +6,18 @@ def accion(a, b):
     esDocente = b
     esExterno = a
     estadoRegistro = b
+    tipoPersonaDestino = b
 
     if esObligatorio == "si" and esDocente == True:
         return "actualizar"
-
-    if esObligatorio == "no" and esDocente == True:
+    else:
+    # if esObligatorio == "no" and esDocente == True:
         return "matricular"
 
     if esExterno == True and estadoRegistro == "porConfirmar":
         return "actualizar"
+
+    if esExterno == True and tipoPersonaDestino == externo:
+        return "registrar"
 
 print(accion("si", True))
