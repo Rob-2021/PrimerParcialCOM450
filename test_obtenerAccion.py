@@ -13,5 +13,8 @@ class TestobtenerAccion(unittest.TestCase):
     def test_prueba3(self):
         self.assertEqual(obtenerAccion.accion(True, "porConfirmar"), "actualizar")
 
+    def test_prueba4(self):
+        self.assertEqual(obtenerAccion.accion(True, "externo"), "registrar")
+
 if __name__ == "__main__":
     unittest.main()
